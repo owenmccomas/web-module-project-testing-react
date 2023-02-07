@@ -14,7 +14,7 @@ const Show = (props) => {
       <p>{show.summary}</p>
 
       <label htmlFor="seasons">Select A Season</label><br />
-      <select onChange={handleSelect} name="seasons" id="seasons">
+      <select onChange={handleSelect} name="seasons" id="seasons" data-testid='select'>
         <option value="none"></option>
         {
           show.seasons.map(season => {
@@ -24,7 +24,7 @@ const Show = (props) => {
       </select>
 
       {
-        (selectedSeason !== "none") && <Episodes episodes={show.seasons[selectedSeason].episodes} />
+        // (selectedSeason !== "none") && <Episodes episodes={show.seasons[selectedSeason].episodes} />
       }
     </div>
   );
